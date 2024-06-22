@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import PageHeader from "@/components/PageHeader";
 import { faEye } from "@fortawesome/free-solid-svg-icons"
-
+import Image from "next/image";
 
 export default function Vision() {
     const [isWaiting, setIsWaiting] = useState(false);
@@ -49,7 +49,13 @@ export default function Vision() {
                     {previewImage ?
                         <div className="grid grid-cols-2 gap-4 bg-white my-5 rounded-lg overflow-hidden">
                             <div>
-                                <img src={previewImage} alt="" className="w-full" />
+                                <Image
+                                    src={previewImage}
+                                    alt="preview image"
+                                    width={1000}
+                                    height={1000}
+                                    className="w-full"
+                                />
                             </div>
                             <div className="p-5">
                                 {isWaiting ?
