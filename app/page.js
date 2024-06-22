@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
+import fireErrorAlert from "@/functions/fire-error-alert";
 import PageHeader from "@/components/PageHeader";
 import GeneratorButton from "@/components/GenerateButton";
 import VocabResultCard from "@/components/VocabResultCard";
@@ -57,8 +58,8 @@ export default function Home() {
       })
       .catch(err => {
         console.log("err:", err);
-        alert("發生錯誤，請稍後再試。");
         setIsWaiting(() => false);
+        fireErrorAlert(err.message);
       });
   }
 
