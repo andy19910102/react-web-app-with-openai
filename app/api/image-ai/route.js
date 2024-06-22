@@ -1,4 +1,5 @@
 import openai from "@/services/openai";
+// import addDocToDB from "@/functions/add-doc-to-db";
 
 export async function POST(req) {
     const body = await req.json();
@@ -14,10 +15,15 @@ export async function POST(req) {
         size: "1024x1024",
     });
     const image_url = response.data[0].url;
-
-    return Response.json({
+    const payload = {
         imageURL: image_url,
         prompt,
         createdAt: new Date().getTime()
-    });
+    };
+    console.log("payload:", payload);
+
+    // TODO: 呼叫addDocToDB函式，將使用者的輸入值與AI回傳的結果存入資料庫
+    // addDocToDB("image-gen-list", payload);
+
+    return Response.json(payload);
 }
