@@ -18,6 +18,11 @@ export default function RootLayout({ children }) {
         <main className="min-h-lvh pt-[50px] bg-gradient-to-tr from-slate-100 to-slate-200">
           {children}
         </main>
+        <footer className="py-5 bg-slate-100 border-t-[1px]">
+          <p className="text-center text-slate-700">
+            &copy; NextJS with OpenAI
+          </p>
+        </footer>
       </body>
     </html>
   );
