@@ -6,7 +6,7 @@ export async function POST(req) {
     // TODO: 透過GPT-4o模型讓AI回傳相關單字
     // 文件連結：https://platform.openai.com/docs/guides/text-generation/chat-completions-api?lang=node.js
     // JSON Mode: https://platform.openai.com/docs/guides/text-generation/json-mode?lang=node.js
-    const systemPrompt = ``;
+    const systemPrompt = `請作為一個單字聯想AI根據所提供的單字聯想5個相關單字`;
     const propmpt = ``;
 
     const openAIReqBody = {

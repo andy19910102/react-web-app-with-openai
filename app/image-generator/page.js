@@ -8,6 +8,8 @@ import GeneratorButton from "@/components/GenerateButton";
 
 export default function ImgGen() {
     const [userInput, setUserInput] = useState("");
+    // 是否在等待回應
+    const [isWaiting, setIsWaiting] = useState(false);
 
     function submitHandler(e) {
         e.preventDefault();

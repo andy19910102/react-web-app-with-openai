@@ -9,7 +9,10 @@ import GeneratorButton from "@/components/GenerateButton";
 export default function Home() {
   const [userInput, setUserInput] = useState("");
   const [language, setLanguage] = useState("English");
+  // 所有的單字生成結果清單
   const [vocabList, setVocabList] = useState([]);
+  // 是否在等待回應
+  const [isWaiting, setIsWaiting] = useState(false);
 
   function submitHandler(e) {
     e.preventDefault();
