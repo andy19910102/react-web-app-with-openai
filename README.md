@@ -1,5 +1,7 @@
 # react-web-app-with-openai
 
+# [https://bit.ly/ntu-ai-web-4](https://bit.ly/ntu-ai-web-4)
+
 安裝所需套件
 ```
 npm i
