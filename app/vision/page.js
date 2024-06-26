@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import axios from "axios";
 import PageHeader from "@/components/PageHeader";
 import { faEye } from "@fortawesome/free-solid-svg-icons"
 
@@ -8,7 +9,7 @@ import { faEye } from "@fortawesome/free-solid-svg-icons"
 export default function Vision() {
 
     function changeHandler(e) {
-        // TODO: 將使用者上傳的圖片轉換成base64傳送到 /api/image-ai { userInput: "" }
+        // TODO: 將使用者上傳的圖片轉換成base64 POST到 /api/image-ai { userInput: "" }
 
     }
 

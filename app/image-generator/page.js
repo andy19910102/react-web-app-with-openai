@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import axios from "axios";
 import { faImage } from "@fortawesome/free-solid-svg-icons"
 import PageHeader from "@/components/PageHeader";
 import GeneratorButton from "@/components/GenerateButton";
@@ -11,7 +12,10 @@ export default function ImgGen() {
     function submitHandler(e) {
         e.preventDefault();
         console.log("User Input: ", userInput);
-        // TODO: 將使用者的輸入值傳送到 /api/image-ai { userInput: "" }
+        const body = { userInput };
+        console.log("body:", body);
+        // TODO: 將body POST到 /api/image-ai { userInput: "" }
+
 
     }
 

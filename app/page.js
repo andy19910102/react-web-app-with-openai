@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import axios from "axios";
 import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
 import PageHeader from "@/components/PageHeader";
 import GeneratorButton from "@/components/GenerateButton";
@@ -14,7 +15,9 @@ export default function Home() {
     e.preventDefault();
     console.log("User Input: ", userInput);
     console.log("Language: ", language);
-    // TODO: 將使用者的輸入值傳送到 /api/vocab-ai { userInput: "", language: "" }
+    const body = { userInput, language };
+    console.log("body:", body);
+    // TODO: 將body POST到 /api/vocab-ai { userInput: "", language: "" }
 
   }
 
