@@ -3,6 +3,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { faImage } from "@fortawesome/free-solid-svg-icons"
+import CurrentFileIndicator from "@/components/CurrentFileIndicator";
 import PageHeader from "@/components/PageHeader";
 import GeneratorButton from "@/components/GenerateButton";
 
@@ -23,6 +24,7 @@ export default function ImgGen() {
 
     return (
         <>
+            <CurrentFileIndicator filePath="/app/image-generator/page.js" />
             <PageHeader title="AI Image Generator" icon={faImage} />
             <section>
                 <div className="container mx-auto">

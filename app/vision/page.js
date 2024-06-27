@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import axios from "axios";
+import CurrentFileIndicator from "@/components/CurrentFileIndicator";
 import PageHeader from "@/components/PageHeader";
 import { faEye } from "@fortawesome/free-solid-svg-icons"
 
@@ -17,6 +18,7 @@ export default function Vision() {
 
     return (
         <>
+            <CurrentFileIndicator filePath="/app/vision/page.js" />
             <PageHeader title="AI Vision" icon={faEye} />
             <section>
                 <div className="container mx-auto">

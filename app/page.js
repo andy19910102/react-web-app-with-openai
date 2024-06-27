@@ -3,6 +3,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
+import CurrentFileIndicator from "@/components/CurrentFileIndicator";
 import PageHeader from "@/components/PageHeader";
 import GeneratorButton from "@/components/GenerateButton";
 
@@ -26,6 +27,7 @@ export default function Home() {
 
   return (
     <>
+      <CurrentFileIndicator filePath="/app/page.js" />
       <PageHeader title="AI Vocabulary Generator" icon={faEarthAmericas} />
       <section>
         <div className="container mx-auto">
