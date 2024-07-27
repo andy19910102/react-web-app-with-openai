@@ -6,6 +6,8 @@ import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons";
 import CurrentFileIndicator from "@/components/CurrentFileIndicator";
 import PageHeader from "@/components/PageHeader";
 import GeneratorButton from "@/components/GenerateButton";
+import VocabGenResultCard from "@/components/VocabGenResultCard";
+import VocabGenResultPlaceholder from "@/components/VocabGenResultPlaceholder";
 
 export default function Home() {
   const [userInput, setUserInput] = useState("");
@@ -68,7 +70,22 @@ export default function Home() {
       </section>
       <section>
         <div className="container mx-auto">
+          {/* 等待後端回應時要顯示的載入畫面 */}
+          {isWaiting ? <VocabGenResultPlaceholder /> : null}
           {/* TODO: 顯示AI輸出結果 */}
+
+          {/* TODO: 一張單字生成卡的範例，串接正式API後移除 */}
+          <VocabGenResultCard
+            result={{
+              title: "水果",
+              payload: {
+                wordList: ["Apple", "Banana", "Cherry", "Date", "Elderberry"],
+                zhWordList: ["蘋果", "香蕉", "櫻桃", "棗子", "接骨木"],
+              },
+              language: "English",
+              createdAt: new Date().getTime(),
+            }}
+          />
 
         </div>
       </section>
