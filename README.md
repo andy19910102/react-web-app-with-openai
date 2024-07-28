@@ -12,9 +12,16 @@ npm i
 npm run dev
 ```
 
+## 環境變數範例
+
 env.local
 ```
 OPENAI_API_KEY=
+FIREBASE_PROJECT_ID=
+FIREBASE_PRIVATE_KEY_ID=
+FIREBASE_PRIVATE_KEY=
+FIREBASE_CLIENT_EMAIL=
+FIREBASE_CLIENT_ID=
 ```
 
 ## 安裝Git
