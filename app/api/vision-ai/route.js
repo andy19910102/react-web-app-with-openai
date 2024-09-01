@@ -13,7 +13,7 @@ export async function POST(req) {
             { "role": "system", "content": systemPrompt },
             { "role": "user", "content": propmpt }
         ],
-        model: "gpt-4o",
+        model: "gpt-4o-mini",
     };
     // const completion = await openai.chat.completions.create(openAIReqBody);
     // console.log("completion:", completion);
