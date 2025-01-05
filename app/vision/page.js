@@ -11,7 +11,8 @@ export default function Vision() {
     // 是否在等待回應
     const [isWaiting, setIsWaiting] = useState(false);
 
-    function changeHandler(e) {
+    const changeHandler = (e) => {
+        e.preventDefault();
         // TODO: 將使用者上傳的圖片轉換成base64 POST到 /api/image-ai { userInput: "" }
 
     }

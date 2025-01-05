@@ -17,7 +17,9 @@ export default function Home() {
   // 是否在等待回應
   const [isWaiting, setIsWaiting] = useState(false);
 
-  function submitHandler(e) {
+  const languageList = ["English", "Japanese", "Korean", "Spanish", "French", "German", "Italian"];
+
+  const submitHandler = (e) => {
     e.preventDefault();
     console.log("User Input: ", userInput);
     console.log("Language: ", language);
@@ -52,13 +54,9 @@ export default function Home() {
                   onChange={(e) => setLanguage(e.target.value)}
                   required
                 >
-                  <option value="English">English</option>
-                  <option value="Japanese">Japanese</option>
-                  <option value="Korean">Korean</option>
-                  <option value="Spanish">Spanish</option>
-                  <option value="French">French</option>
-                  <option value="German">German</option>
-                  <option value="Italian">Italian</option>
+                  {
+                    languageList.map(language => <option key={language} value={language}>{language}</option>)
+                  }
                 </select>
               </div>
               <div className="w-1/5 px-2">
@@ -83,7 +81,7 @@ export default function Home() {
                 zhWordList: ["蘋果", "香蕉", "櫻桃", "棗子", "接骨木"],
               },
               language: "English",
-              createdAt: new Date().getTime(),
+              createdAt: Date.now(),
             }}
           />
 

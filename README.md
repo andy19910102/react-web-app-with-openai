@@ -14,7 +14,7 @@ npm run dev
 
 ## 環境變數範例
 
-env.local
+.env
 ```
 OPENAI_API_KEY=
 FIREBASE_PROJECT_ID=

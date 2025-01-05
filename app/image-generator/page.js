@@ -12,7 +12,7 @@ export default function ImgGen() {
     // 是否在等待回應
     const [isWaiting, setIsWaiting] = useState(false);
 
-    function submitHandler(e) {
+    const submitHandler = (e) => {
         e.preventDefault();
         console.log("User Input: ", userInput);
         const body = { userInput };
