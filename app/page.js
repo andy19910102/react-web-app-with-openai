@@ -21,10 +21,12 @@ export default function Home() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log("User Input: ", userInput);
-    console.log("Language: ", language);
     const body = { userInput, language };
     console.log("body:", body);
+    // 清空輸入框
+    setUserInput("");
+    // 設置等待狀態
+    setIsWaiting(true);
     // TODO: 將body POST到 /api/vocab-ai { userInput: "", language: "" }
 
   }

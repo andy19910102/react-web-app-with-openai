@@ -5,7 +5,11 @@ export async function POST(req) {
     console.log("body:", body);
     // TODO: 透過dall-e-3模型讓AI產生圖片
     // 文件連結: https://platform.openai.com/docs/guides/images/usage
-    const propmpt = ``;
 
-    return Response.json({ message: "Success" });
+    // 要回傳給前端的資料
+    const data = {
+        message: "Success",
+    };
+
+    return Response.json(data);
 }

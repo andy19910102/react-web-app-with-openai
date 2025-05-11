@@ -6,17 +6,23 @@ export async function POST(req) {
     // TODO: 透過base64讓AI辨識圖片
     // 文件連結：https://platform.openai.com/docs/guides/vision?lang=node
     const systemPrompt = ``;
-    const propmpt = ``;
+    const prompt = ``;
 
     const openAIReqBody = {
         messages: [
             { "role": "system", "content": systemPrompt },
-            { "role": "user", "content": propmpt }
+            { "role": "user", "content": prompt }
         ],
         model: "gpt-4o-mini",
     };
     // const completion = await openai.chat.completions.create(openAIReqBody);
-    // console.log("completion:", completion);
+    // const aiResponseText = completion.choices[0].message.content;
+    // console.log("ai的回應文字:", aiResponseText);
 
-    return Response.json({ message: "Success" });
+    // 要回傳給前端的資料
+    const data = {
+        message: "Success",
+    };
+
+    return Response.json(data);
 }
